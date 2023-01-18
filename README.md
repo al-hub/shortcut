@@ -7,7 +7,7 @@ f + enter : fun(초성 후에 자동생성)  p + enter -> public
 ctrl + shift + enter     : 함수작성 후 { } 삽입 엔터 ★   
 ctrl + i : 자동코드 (implementation)  
 
-ctrl + d /x              : 현재 라인 복사 /삭제 
+ctrl + d /x              : 현재 라인 복사 /삭제   
 ctrl + shift + up/down  : 현재 라인 코드위아래 이동  
 
 shift + enter           : 현재라인 손상없이 엔터 삽입
