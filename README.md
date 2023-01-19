@@ -25,6 +25,9 @@ ctrl + q : 도움말 ( 설명을 읽을 수 있어야 한다 , T R )
 
 ctrl + b : 탐색( declare 함수 내부로 분석, ctrl ++ left/right 이전 이후 )
 
+alt + 'x'부분 클릭 : 현재탭을 제외한 나머지 탭 close  
+
+
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
 
 
