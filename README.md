@@ -3,7 +3,7 @@
 ## intellij code 작성  ([ref](https://ifuwanna.tistory.com/241))
 main                  : live template 의 이해     
 
-f + enter : fun(초성 후에 자동생성)  p + enter -> public  
+f + enter : fun( 초성 후에 자동생성, 예시 p + enter -> public )
 ctrl + shift + enter     : 함수작성 후 { } 삽입 엔터 ★   
 ctrl + i : 자동코드 (implementation)  
 ctrl + o : override  
