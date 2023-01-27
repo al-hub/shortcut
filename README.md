@@ -49,7 +49,8 @@ f12 : latest active window
 ### 편의
 ⭐⭐alt + 'x'부분 클릭 : 현재탭을 제외한 나머지 탭 close   
 ⭐ctrl + alt + l : 코드정렬  
-⭐ctrl+alt+shift+T : refactor  
+⭐ctrl+alt+shift+T : refactor 
+ctlr++ : 코드 펼치기  
 ctrl + alt + t         : try - catch ( surround with )  
 
 ctrl + shift + p : 타입확인  
