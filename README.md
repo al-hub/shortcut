@@ -34,9 +34,16 @@ ctrl + d/x              : 라인 복사 /삭제
 ⭐shift + /               : 주석 처리/해제  
   
 
-### 검색
-ctrl + f :  find시리즈, n: class name, e: explorer, f12 methodi  
+### 검색창,switching
+esc : default
+
+ctrl + f :  f시리즈, e: explorer, n: class name, , f12: method find
 alt+f7   : awsome fine
+
+f12 시리즈
+ctrl+shift+f12 : editmode
+alt+f12 : command line
+f12 : latest active window
 
 
 ### 편의
