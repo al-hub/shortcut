@@ -13,7 +13,7 @@ alt + ins : 생성자
 ctrl + d /x              : 현재 라인 복사 /삭제   
 ctrl + shift + up/down  : 현재 라인 코드위아래 이동  
 
-shift + enter           : 현재라인 손상없이 엔터 삽입
+shift + enter           : 현재라인 손상없이 엔터 삽입 (ctrl+alt+enter 위라인 삽입)
 
 shift + /               : 주석 처리/해제
   
