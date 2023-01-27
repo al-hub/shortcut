@@ -27,7 +27,9 @@ ctrl + q : 도움말 ( 설명을 읽을 수 있어야 한다 , T R )
 
 alt + 'x'부분 클릭 : 현재탭을 제외한 나머지 탭 close  
  
-ctrl + f :  find시리즈, n: class name, e: explorer, f12 method
+ctrl + f :  find시리즈, n: class name, e: explorer, f12 methodi
+
+ctrl + shift + m , ctrl + shift + m : 코드 블록확인
 
 
 abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor)) 
