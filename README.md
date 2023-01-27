@@ -5,7 +5,7 @@ main                  : live template 의 이해
 
 f + enter : fun( 초성 후에 자동생성, 예시 p + enter -> public )  
 ctrl + shift + enter     : 함수작성 후 { } 삽입 엔터 ★   
-ctrl + i : 자동코드 (implementation)  
+⭐ctrl + i : 자동코드 (implementation)  
 ctrl + o : override  
 
 alt + ins : 생성자  
@@ -26,6 +26,12 @@ ctrl + q : 도움말 ( 설명을 읽을 수 있어야 한다 , T R )
 ctrl + b : 탐색( declare 함수 내부로 분석, ctrl ++ left/right 이전 이후 )
 
 alt + 'x'부분 클릭 : 현재탭을 제외한 나머지 탭 close  
+
+
+
+⭐psvm + enter
+⭐soutpm + enter
+⭐soutpa + enter
 
 
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
