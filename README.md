@@ -46,6 +46,8 @@ abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have
 
 ctrl+shift+v 😵 ctrl+v from history
 
+ctrl+alt+shift+l : refactor
+
 
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
 
