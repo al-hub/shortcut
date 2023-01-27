@@ -9,7 +9,7 @@ ctrl+shift+a : action (split window 등 하기에 좋음)
 ⭐ctrl + o : override  
 ⭐alt + ins : 생성자  
 
-⭐alt+1, alt+ins : 클래스만들기  
+⭐ctrl+alt+ins : 클래스만들기 ( alt+1, alt+ins )
 
 f + tab : fun( 초성 후에 자동생성, 예시 p + enter -> public )  
 
