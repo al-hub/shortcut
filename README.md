@@ -32,6 +32,8 @@ ctrl + f :  find시리즈, n: class name, e: explorer, f12 methodi
 ctrl + shift + m , ctrl + shift + m : 코드 블록확인
 ctrl + shift + delete : unwrap 😵
 
+ctrl + alt + l : 
+
 abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor)) 
 
 ⭐psvm + tab  
