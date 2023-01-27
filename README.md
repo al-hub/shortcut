@@ -29,9 +29,13 @@ alt + 'x'부분 클릭 : 현재탭을 제외한 나머지 탭 close
 
 
 
-⭐psvm + enter
-⭐soutpm + enter
-⭐soutpa + enter
+⭐psvm + enter  
+⭐soutpm + enter  
+⭐soutpa + enter  
+
+
+alt+1, alt+ins : 클래스만들기
+
 
 
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
