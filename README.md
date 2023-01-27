@@ -42,6 +42,9 @@ abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have
 ⭐alt+1, alt+ins : 클래스만들기
 
 
+ctrl+shift+v 😵 ctrl+v from history
+
+
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
 
 
