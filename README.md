@@ -12,7 +12,7 @@ f + enter : fun( 초성 후에 자동생성, 예시 p + enter -> public )
 
 ctrl + d /x              : 현재 라인 복사 /삭제   
 ⭐ctrl + shift + up/down  : 현재 라인 또는 코드블록 위아래 이동 (alt+shift+up/down, ctrl+alt+shift+left/right: element swap😵)
-
+ctrl+w                     : 확장하면서 선택
 ⭐shift + enter           : 현재라인 손상없이 엔터 삽입 (ctrl+alt+enter 위라인 삽입)
 
 ⭐shift + /               : 주석 처리/해제
