@@ -67,6 +67,12 @@ ctrl + q : 도움말 ( 설명을 읽을 수 있어야 한다 , T R )
 ctrl + \` : 테마변경
 
 
+### custom
+alt+left/right : editor selected tab 에서 삭제
+split window : ctrl+alt+shift+|/_ (close ctrl+f4)
+alt+left/right: next/previous split 로 할당
+
+
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
 
 
