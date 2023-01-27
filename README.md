@@ -29,6 +29,8 @@ alt + 'x'부분 클릭 : 현재탭을 제외한 나머지 탭 close
 
 
 
+ abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor)) 
+
 ⭐psvm + enter  
 ⭐soutpm + enter  
 ⭐soutpa + enter  
