@@ -61,6 +61,8 @@ ctrl + shift + m , ctrl + shift + m : 코드 블록확인
 
 ctrl + q : 도움말 ( 설명을 읽을 수 있어야 한다 , T R )  
 
+ctrl + \` : 
+
 
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
 
