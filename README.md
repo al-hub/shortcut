@@ -36,6 +36,7 @@ ctrl + d/x              : 라인 복사 /삭제
 
 ### 검색
 ctrl + f :  find시리즈, n: class name, e: explorer, f12 methodi  
+alt+f7   : awsome fine
 
 
 ### 편의
