@@ -34,10 +34,10 @@ ctrl + shift + m , ctrl + shift + m : 코드 블록확인
 
 abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor)) 
 
-⭐psvm + enter  
+⭐psvm + tab  
 ⭐sout + tab  
-⭐soutpm + enter  
-⭐soutpa + enter  
+⭐soutpm + tab  
+⭐soutpa + tab  
 
 ⭐alt+1, alt+ins : 클래스만들기
 
