@@ -1,6 +1,8 @@
 # shortcut
 
 ## intellij code 작성  ([ref](https://ifuwanna.tistory.com/241))
+ctrl+shift+a : action (split window 등 하기에 좋음)
+
 
 ### 코드작성
 ⭐ctrl + i : 자동코드 (implementation), ⭐ctrl+shift+i 잠깐 클래스 훝어보기  
