@@ -11,7 +11,7 @@
 
 f + tab : fun( 초성 후에 자동생성, 예시 p + enter -> public )  
 
-abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor)) 
+abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor))   
 ⭐psvm + tab  
 ⭐sout + tab  
 ⭐soutpm + tab  
@@ -19,7 +19,7 @@ abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have
 
 
 ### 이동
-⭐ctrl + shift + up/down  : 현재라인, 함수블록, 또는 ⭐⭐선택블록 위아래 이동 (alt+shift+up/down, ctrl+alt+shift+left/right: element swap😵)
+⭐ctrl + shift + up/down  : 라인,함수블록, ⭐⭐선택블록 위아래 이동 (alt+shift+up/down, ctrl+alt+shift+left/right: element swap😵)
 
 ⭐ctrl + b : base탐색( declare 함수 내부로 분석, ⭐ ctrl ++ left/right 이전 이후 ) , ctrl+u : use
 
