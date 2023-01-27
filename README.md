@@ -19,7 +19,7 @@ abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have
 
 
 ### 이동
-⭐ctrl + shift + up/down  : 라인,함수블록, ⭐⭐선택블록 위아래 이동 (alt+shift+up/down, ctrl+alt+shift+left/right: element swap😵)  
+⭐ctrl + shift + up/down  : 라인,함수블록, ⭐⭐선택블록 위아래 이동 (alt+shift+up/down, 😵ctrl+alt+shift+left/right: element swap)  
 
 ⭐ctrl + b : base탐색(declare 함수 내부로 분석, ⭐ctrl+alt+ left/right 이전 이후)   
 
