@@ -23,7 +23,7 @@ abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have
 ### 이동
 ⭐ctrl + shift + up/down  : 라인,함수블록, ⭐⭐선택블록 위아래 이동 (alt+shift+up/down, 😵ctrl+alt+shift+left/right: element swap)  
 
-⭐⭐ctrl + b : go to declaration or usages (ctrl+alt+b: implmentation, ⭐ctrl+alt+left/right 이전 이후)   
+⭐⭐ctrl + b : go to (symbol)declaration or usages (ctrl+alt+b: implmentation, ⭐ctrl+alt+left/right 이전 이후)   
 
 ctrl + w                     : 확장하면서 선택 (ctrl+shift+w 이전선택영역)  
 
@@ -39,8 +39,8 @@ ctrl + d/x              : 라인 복사 /삭제
 ### 검색창,switching
 esc : default
 
-ctrl + f :  f시리즈, e: explorer, n: class name, f12: method find  
-alt+f7   : awsome fine
+ctrl + f :  f시리즈, ctrl+e: explorer, ctrl+n: class, ⭐ctrl+f12: method find  
+alt+f7   : interface가 사용되는 위치 awsome fine
 
 f12 시리즈
 ctrl+shift+f12 : editmode
