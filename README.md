@@ -74,7 +74,7 @@ alt+left/right: next/previous split 로 할당
 
 
 ### good scenario
-at method: ctrl+\[ → ctrl+b → ctrl+f12 → ctrl+left x3 
+at method: ctrl+\[ → ctrl+b → ctrl+f12 → ctrl+alt+leftx3 
 
 [surround({"'](https://www.jetbrains.com/idea/guide/tips/surround-with-brackets-quotes/)    
 
