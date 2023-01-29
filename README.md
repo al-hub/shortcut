@@ -39,7 +39,7 @@ ctrl + d/x              : 라인 복사 /삭제
 ### 검색창,switching
 esc : default
 
-ctrl + f :  f시리즈, e: explorer, n: class name, , f12: method find
+ctrl + f :  f시리즈, e: explorer, n: class name, f12: method find  
 alt+f7   : awsome fine
 
 f12 시리즈
