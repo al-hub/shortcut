@@ -27,9 +27,10 @@ abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have
 ⭐ctrl+\[/\] : 블록이동 (method 내 클래스 처음위치로 이동시 편리 )
 
 ### 편집
-⭐ctrl+shift+up/down : 편집이동, 라인,함수블록, ⭐⭐선택블록 위아래 이동 (강제이동 alt+shift+up/down, 😵ctrl+alt+shift+left/right: element swap)  
+⭐ctrl+shift+up/down : 편집이동, 라인,함수블록, 
+⭐⭐선택블록 위아래 이동 (강제이동 alt+shift+up/down, 😵ctrl+alt+shift+left/right: element swap)  
 ctrl + d/x              : 라인 복사 /삭제   
-ctrl + w                     : 확장하면서 선택 (ctrl+shift+w 이전선택영역)  
+ctrl + w                : 확장하면서 선택 (ctrl+shift+w 이전선택영역)  
 
 ⭐shift+enter           : 라인 손상없이 엔터 (ctrl+alt+enter 위라인 삽입, ctrl+shift+enter: 코드고치면서 다음라인 삽입)  
 ⭐ctrl+shift + enter     : 함수작성 후 { } 삽입 엔터 ★   
