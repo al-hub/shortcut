@@ -9,20 +9,20 @@ ctrl+shift+s : setting
   - ctrl+shitf+f10
 
 
-### 코드작성
-⭐ctrl+i : 자동코드 (implementation), ⭐ctrl+shift+i 잠깐 클래스 훝어보기  
-⭐ctrl+o : override  
-⭐alt+ins : 생성자  
+-  코드작성
+  - ⭐ctrl+i : 자동코드 (implementation), ⭐ctrl+shift+i 잠깐 클래스 훝어보기  
+  - ⭐ctrl+o : override  
+  - ⭐alt+ins : 생성자  
 
-⭐ctrl+alt+ins : 클래스만들기 ( alt+1, alt+ins )
+  - ⭐ctrl+alt+ins : 클래스만들기 ( alt+1, alt+ins )
 
-f + tab : fun( 초성 후에 자동생성, 예시 p + enter -> public )  
+  - f + tab : fun( 초성 후에 자동생성, 예시 p + enter -> public )  
 
-abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor))   
-⭐psvm + tab  
-⭐sout + tab  
-⭐soutpm + tab  
-⭐soutpa + tab  
+  - abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor))   
+    - ⭐psvm + tab  
+    - ⭐sout + tab  
+    - ⭐soutpm + tab  
+    - ⭐soutpa + tab  
 
 
 ### 이동
