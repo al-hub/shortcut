@@ -1,10 +1,11 @@
 # shortcut
 
 ## intellij code 작성  ([ref](https://ifuwanna.tistory.com/241))
-ctrl+shift+a : action (split window 등 하기에 좋음)
-ctrl+shift+s : setting
+- ⭐ctrl+alt+s : setting 설정창
+- ⭐ctrl+shift+a : action 창 (split window 등 하기에 좋음)
 
 
+## 실전
 - 빌드 
   - ctrl+shitf+f10
 - 코드작성
@@ -19,7 +20,6 @@ ctrl+shift+s : setting
     - ⭐soutpm + tab  
     - ⭐soutpa + tab  
     - f + tab : fun( 초성 후에 자동생성, 예시 p + enter -> public )
-
 
 - 코드이동
   - jump 
