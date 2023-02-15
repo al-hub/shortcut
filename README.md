@@ -64,7 +64,7 @@
 
 - custom
   - ⭐
-  - alt+left/right : editor selected tab 에서 삭제
+  - alt+left/right : (세팅창ctrl+alt+s에서)editor selected tab에서 삭제 
   - split window : ctrl+alt+shift+|/_ (close ctrl+f4)
   - alt+left/right: next/previous split 로 할당
 
