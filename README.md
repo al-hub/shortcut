@@ -8,7 +8,7 @@ ctrl+shift+s : setting
 - 빌드 
   - ctrl+shitf+f10
 - 코드작성
-  - 기본
+  - fast write
     - ⭐ctrl+i : 자동코드 (implementation), ⭐ctrl+shift+i 잠깐 클래스 훝어보기  
     - ⭐ctrl+o : override  
     - ⭐alt+ins : 생성자  
