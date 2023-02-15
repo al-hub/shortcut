@@ -7,13 +7,11 @@ ctrl+shift+s : setting
 
 - 빌드 
   - ctrl+shitf+f10
-
-
--  코드작성
-  -⭐ctrl+i : 자동코드 (implementation), 
-  -⭐ctrl+shift+i 잠깐 클래스 훝어보기  
-  - ⭐ctrl+o : override  
-  - ⭐alt+ins : 생성자  
+- 코드작성
+  - 기본
+    - ⭐ctrl+i : 자동코드 (implementation), ⭐ctrl+shift+i 잠깐 클래스 훝어보기  
+    - ⭐ctrl+o : override  
+    - ⭐alt+ins : 생성자  
 
 
   - ⭐ctrl+alt+ins : 클래스만들기 ( alt+1, alt+ins )
