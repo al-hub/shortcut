@@ -12,17 +12,13 @@ ctrl+shift+s : setting
     - ⭐ctrl+i : 자동코드 (implementation), ⭐ctrl+shift+i 잠깐 클래스 훝어보기  
     - ⭐ctrl+o : override  
     - ⭐alt+ins : 생성자  
-
-
-  - ⭐ctrl+alt+ins : 클래스만들기 ( alt+1, alt+ins )
-
-  - f + tab : fun( 초성 후에 자동생성, 예시 p + enter -> public )  
-
+    - ⭐ctrl+alt+ins : 클래스만들기 ( alt+1, alt+ins )    
   - abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor))   
     - ⭐psvm + tab  
     - ⭐sout + tab  
     - ⭐soutpm + tab  
     - ⭐soutpa + tab  
+    - f + tab : fun( 초성 후에 자동생성, 예시 p + enter -> public )
 
 
 ### 이동
