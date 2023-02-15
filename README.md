@@ -27,6 +27,11 @@
     - ⭐⭐ctrl+b : go to (symbol)declaration or usages (ctrl+alt+b: implmentation)   
     - ⭐ctrl+\[/\] : 블록이동 (method 내 클래스 처음위치로 이동시 편리 )
 
+- 창이동
+  - jump 
+    - alt+1 프로젝트 창 이동
+    - est 코드창
+
 - 편집
   - 코드편집
     - ⭐ctrl+shift+up/down : 편집이동, 라인, 함수블록, 
