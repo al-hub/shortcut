@@ -2,7 +2,9 @@
 
 ## intellij code 작성  ([ref](https://ifuwanna.tistory.com/241))
 - ⭐ctrl+alt+s : setting 설정창
-- ⭐ctrl+shift+a : action 창 (split window 등 하기에 좋음)
+- ⭐ctrl+shift+a : action 창 (split window, compare file 등이 편의)
+- ⭐project에서 두 개 폴더 선택, ctrl+d 폴더비교
+
 
 
 ## 실전
