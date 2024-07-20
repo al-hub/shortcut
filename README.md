@@ -16,7 +16,7 @@
   - fast write
     - ⭐ctrl+i : 자동코드 (implementation), ⭐ctrl+shift+i 잠깐 클래스 훝어보기  
     - ⭐ctrl+o : override  
-    - ⭐alt+ins : 생성자  
+    - ⭐⭐alt+ins : 생성자  
     - ⭐ctrl+alt+ins : 클래스만들기 ( alt+1, alt+ins )    
   - abbreviations ([using vim](https://stackoverflow.com/questions/44718146/vim-have-incorrect-cursor))   
     - ⭐psvm + tab  
