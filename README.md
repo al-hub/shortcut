@@ -1,7 +1,7 @@
 # shortcut
 
 ## codex
-- node js
+- node js (windows https://nodejs.org/en/download/)
 ```shell
    sudo apt update
    sudo apt install -y nodejs npm
