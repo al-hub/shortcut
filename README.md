@@ -28,7 +28,10 @@
    /init
    your command
 ```
-
+- Idea
+```
+out - home(laptop) - github
+```
 
 ## intellij code 작성  ([ref](https://ifuwanna.tistory.com/241))
 - ⭐ctrl+alt+s : setting 설정창
