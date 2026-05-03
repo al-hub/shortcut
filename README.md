@@ -1,5 +1,35 @@
 # shortcut
 
+## codex
+- node js
+```shell
+   sudo apt update
+   sudo apt install -y nodejs npm
+```
+- if not,
+```shell
+   sudo apt remove -y nodejs npm
+   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+   source ~/.bashrc
+   nvm install --lts
+   nvm use --lts   
+```
+- Install
+```shell
+  npm uninstall -g @openai/codex
+  npm i -g @openai/codex@latest
+  codex --version
+```
+- Run
+```shell
+   cd your_work_directory
+   codex
+   /model
+   /init
+   your command
+```
+
+
 ## intellij code 작성  ([ref](https://ifuwanna.tistory.com/241))
 - ⭐ctrl+alt+s : setting 설정창
 - ⭐ctrl+shift+a : action 창 (split window, compare file 등이 편의)
