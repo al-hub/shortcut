@@ -1,55 +1,38 @@
-# Paseo keyboard workflow (stock-first)
+# Paseo stock shortcut setup (Windows browser, safe subset)
 
-Updated: 2026-09-25. Target: Windows Paseo; validate against installed version.
+Updated: 2026-09-25. Source-inspected, not yet tested in the user's installed Paseo.
 
-## Intent
-Keep tmux-session-dock-rs muscle memory while retaining Paseo's native agent UX and workspace/worktree management. Split is spatial; do not assume it creates a new worktree. Do not claim terminal CLI automatically morphs into a native Paseo agent pane.
+## How to use
+Download/clone the **whole** `paseo` directory on Windows, then double-click `setup.cmd`. Menu options copy the matching JavaScript to clipboard; **they do not directly change Paseo**. Open the trusted Paseo browser page, F12 → Console, inspect/paste/run the copied script, confirm, and reload. For restoration run menu option 2 on the **same origin and browser profile**. Status (3) is read-only. Browser developer consoles may restrict pasting.
 
-## Target bindings
+## What this version can actually set
+The inspected upstream `keyboard-shortcuts.ts` has the following non-Mac bindings:
+- Ctrl+A then A: new agent/open project action
+- Ctrl+A then T: new terminal (not while terminal has focus)
+- Ctrl+A then ArrowLeft / ArrowRight: previous/next workspace (desktop-only, not while terminal has focus)
+- Ctrl+A then P: command center (not while terminal has focus)
 
-| Action | Desired keys | Stock action / limitation |
-|---|---|---|
-| Split right | Ctrl+A then % | workspace.pane.split.right |
-| Split down | Ctrl+A then " | workspace.pane.split.down |
-| Focus pane | Alt+arrows | workspace.pane.focus.* |
-| Move tab between panes | Ctrl+Alt+arrows | workspace.pane.move-tab.*; **not** tmux pane swap |
-| New agent | Ctrl+A then A | agent.new |
-| New terminal | Ctrl+A then T | workspace.terminal.new |
-| Close pane | Ctrl+A then X | workspace.pane.close |
-| Previous/next workspace | Ctrl+A then Left/Right | workspace.navigate.relative |
-| Command center | Ctrl+A then P | command-center.toggle; **not guaranteed direct project selector** |
+**Important limitations:**
+- Upstream currently gates pane split/focus/move-tab/close shortcut binding definitions with `when: { mac: true }`. Changing those Mac-only binding IDs does **not** enable them on Windows. The previous script incorrectly attempted this; it has been corrected to omit them.
+- Upstream parser requires `ArrowLeft` etc., not `Left`; and `%` / `"` are not accepted as raw shortcut key names. Earlier script values were invalid and have been removed.
+- Ctrl+A may conflict with terminal readline. Project sidebar seamless traversal, true pane swapping, and terminal→native-agent conversion are not implemented by this preset.
+- This is **not** a Windows Electron app one-click installer: desktop storage write location/interface and end-to-end behavior remain unverified. Never modify Electron profile files by guessing.
 
-### Known limits
-- Alt+Left at the leftmost pane does **not** automatically focus the project sidebar with stock key rebinding.
-- Ctrl+Alt+arrows moves tabs between panes, not entire-pane swaps.
-- Terminal `codex` / `claude` does not automatically replace its pane with native Paseo agent UX.
-- Ctrl+A may conflict with terminal readline and keyboard event handling; test inside agent input and terminal.
-- Shift symbols %, " and chord strings require validation in Settings on the installed version.
-- The source defines binding IDs for platform variants; avoid overriding unrelated Mac/web variants.
+## Safety
+Installer backs up the previous overrides in timestamped browser localStorage, rejects malformed existing overrides and detected duplicates, and asks for confirmation. Restore chooses the latest installer backup and warns that subsequent user edits will be overwritten. Backup remains on the same browser origin/profile; clearing site data also clears it. If you have installed repeatedly, inspect backups before restoring. Status only checks persisted values, not runtime handling.
 
-## Applying on browser Paseo
-1. Open the same Paseo origin in your browser and inspect Settings → Keyboard Shortcuts.
-2. Save current settings before changes. Run `apply-browser-shortcuts.js` in the browser developer console on the trusted Paseo page (paste its contents, not the filename). Review its preview and confirm.
-3. Reload; check Settings and test every binding. Restore from the generated backup if any conflicts appear.
-4. On Windows desktop/Electron, **do not assume** browser localStorage is the same as its persistent storage. Set one shortcut through Settings and verify the actual storage backend before automation.
+## Acceptance checklist
+1. Verify backup exists and only five Windows-supported binding IDs changed.
+2. Reload, test agent/terminal creation and workspace navigation outside terminal focus.
+3. Test command center; check Ctrl+A interaction with terminal.
+4. Restore and verify previous overrides exactly reappear.
+5. Confirm browser configuration does not imply Windows Electron app configuration.
 
-Source references:
+## Upstream source
 - https://github.com/getpaseo/paseo/blob/main/packages/app/src/keyboard/keyboard-shortcuts.ts
+- https://github.com/getpaseo/paseo/blob/main/packages/app/src/keyboard/shortcut-string.ts
 - https://github.com/getpaseo/paseo/blob/main/packages/app/src/hooks/use-keyboard-shortcut-overrides.ts
 - https://github.com/getpaseo/paseo/blob/main/packages/app/e2e/browser/keyboard-shortcut-sequence.spec.ts
 
-## Acceptance test
-1. Agent input and terminal focus: Alt+arrows move between panes.
-2. Ctrl+Alt+arrows move a tab, without silently treating it as pane swap.
-3. Ctrl+A then % / " split in expected directions.
-4. Ctrl+A then A / T invoke native new agent / terminal.
-5. Ctrl+A then arrows change workspace; Ctrl+A then P opens command center.
-6. Existing settings can be restored after a failed test.
-
-## Follow-up
-After stock usage, measure friction in sidebar traversal, same-pane terminal→native-agent UX, and true pane swap. Only then consider Paseo patches.
-
-## Windows setup menu (2026-09-25)
-Run `setup.cmd` **from a downloaded/cloned copy of this whole folder**, not directly from the GitHub webpage. It presents Install / Uninstall / Status / README / Exit. At present, these are **guided browser-only actions**: the menu copies the matching JavaScript to the clipboard, and you run it in DevTools Console on the correct Paseo browser origin. The install helper asks for confirmation and backs up existing overrides. The restore helper uses the most recent installer backup; if you have installed multiple times, inspect the backup key before restoring. The status helper is read-only.
-
-**Important:** The Windows Electron app's shortcut persistence path and safe write interface have not been verified. The menu deliberately does not edit the app profile or claim to install desktop shortcuts automatically. A genuine one-click Windows desktop installer requires that validation first. Do not run browser Console snippets on untrusted sites.
+## Next milestone
+Verify actual Windows Electron shortcut storage and supported pane actions before offering genuine one-click desktop install/uninstall. Until then keep setup explicitly browser-guided.
