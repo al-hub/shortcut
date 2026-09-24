@@ -48,3 +48,8 @@ Source references:
 
 ## Follow-up
 After stock usage, measure friction in sidebar traversal, same-pane terminal→native-agent UX, and true pane swap. Only then consider Paseo patches.
+
+## Windows setup menu (2026-09-25)
+Run `setup.cmd` **from a downloaded/cloned copy of this whole folder**, not directly from the GitHub webpage. It presents Install / Uninstall / Status / README / Exit. At present, these are **guided browser-only actions**: the menu copies the matching JavaScript to the clipboard, and you run it in DevTools Console on the correct Paseo browser origin. The install helper asks for confirmation and backs up existing overrides. The restore helper uses the most recent installer backup; if you have installed multiple times, inspect the backup key before restoring. The status helper is read-only.
+
+**Important:** The Windows Electron app's shortcut persistence path and safe write interface have not been verified. The menu deliberately does not edit the app profile or claim to install desktop shortcuts automatically. A genuine one-click Windows desktop installer requires that validation first. Do not run browser Console snippets on untrusted sites.
