@@ -1,48 +1,45 @@
-/* Stock Paseo browser-only shortcut experiment.
- * Paste in DevTools Console on your trusted Paseo browser origin.
- * No writes unless user confirms. Does not target Windows app storage.
+/* Paseo browser Windows-safe preset. Paste on trusted Paseo origin.
+ * Stock upstream currently marks split/focus/move/close bindings mac:true:
+ * do not write inactive Mac binding IDs on Windows.
  */
 (() => {
   const KEY = "@paseo:keyboard-shortcut-overrides";
-  const backupKey = KEY + ":backup:" + new Date().toISOString();
-  const original = localStorage.getItem(KEY);
-  let current;
-  try {
-    current = original === null ? {} : JSON.parse(original);
-    if (!current || Array.isArray(current) || typeof current !== "object")
-      throw new Error("Unexpected existing shortcut format");
-  } catch (e) {
-    console.error("Cannot parse existing settings; no changes made.", e);
-    return;
-  }
-
-  // Paseo's stock binding IDs (check against installed version).
+  const BACKUP = KEY + ":backup:" + new Date().toISOString();
   const proposed = {
-    "workspace-pane-split-right-cmd-backslash": "Ctrl+A %",
-    "workspace-pane-split-down-cmd-shift-backslash": 'Ctrl+A "',
     "agent-new-ctrl-shift-o-non-mac": "Ctrl+A A",
     "workspace-terminal-new-ctrl-shift-t-non-mac": "Ctrl+A T",
-    "workspace-pane-close-cmd-shift-w": "Ctrl+A X",
-    "workspace-navigate-relative-ctrl-left-non-mac": "Ctrl+A Left",
-    "workspace-navigate-relative-ctrl-right-non-mac": "Ctrl+A Right",
+    "workspace-navigate-relative-ctrl-left-non-mac": "Ctrl+A ArrowLeft",
+    "workspace-navigate-relative-ctrl-right-non-mac": "Ctrl+A ArrowRight",
     "command-center-toggle-ctrl-k-non-mac": "Ctrl+A P"
   };
-  for (const [direction, key] of Object.entries({
-    left: "Left", right: "Right", up: "Up", down: "Down"
-  })) {
-    proposed[`workspace-pane-focus-${direction}-cmd-shift-${direction}`] =
-      `Alt+${key}`;
-    proposed[`workspace-pane-move-tab-${direction}-cmd-shift-alt-${direction}`] =
-      `Ctrl+Alt+${key}`;
+  let raw, old;
+  try {
+    raw = localStorage.getItem(KEY);
+    old = raw === null ? {} : JSON.parse(raw);
+    if (!old || Array.isArray(old) || typeof old !== "object") throw Error("Unexpected JSON shape");
+    for (const [k,v] of Object.entries(old))
+      if (v !== null && typeof v !== "string") throw Error("Invalid override: " + k);
+  } catch (e) { console.error("Existing settings invalid; no changes.",e); return; }
+  const conflicts = Object.entries(proposed).filter(([id, combo]) =>
+    Object.entries(old).some(([other, assigned]) => other !== id && assigned === combo));
+  console.table(Object.entries(proposed).map(([id, combo]) => ({id, combo})));
+  if (conflicts.length) {
+    console.warn("Potential existing duplicate shortcuts:", conflicts);
+    console.warn("Resolve duplicates in Paseo Settings before applying.");
+    return;
   }
-  console.table(proposed);
-  console.warn("Experimental browser-local overrides. Ctrl+A may conflict with terminal input.");
-  if (!confirm("Back up existing shortcuts and apply the displayed Paseo bindings?")) return;
-  if (original !== null) localStorage.setItem(backupKey, original);
-  else localStorage.setItem(backupKey, "null");
-  localStorage.setItem(KEY, JSON.stringify({ ...current, ...proposed }));
-  console.info("Saved. Backup:", backupKey, "Reload Paseo and test each shortcut.");
-  console.info("Restore with: localStorage.setItem(" + JSON.stringify(KEY) +
-    ", localStorage.getItem(" + JSON.stringify(backupKey) +
-    ") === 'null' ? '{}' : localStorage.getItem(" + JSON.stringify(backupKey) + ")); location.reload();");
+  console.warn("Windows stock does NOT expose native pane split/focus/move/close bindings in inspected source.");
+  console.warn("Ctrl+A may be consumed by terminal; new agent/terminal actions exclude terminal focus.");
+  if (!confirm("Back up and apply 5 verified non-Mac binding overrides?")) return;
+  try {
+    // Store an envelope, avoiding the ambiguous string 'null' backup sentinel.
+    localStorage.setItem(BACKUP, JSON.stringify({ existed: raw !== null, value: raw }));
+    localStorage.setItem(KEY, JSON.stringify({...old, ...proposed}));
+  } catch(e) {
+    console.error("Write failed; attempt rollback.", e);
+    try { if (raw === null) localStorage.removeItem(KEY); else localStorage.setItem(KEY,raw); }
+    catch (rollback) { console.error("Rollback failed:",rollback); }
+    return;
+  }
+  console.info("Applied; backup:", BACKUP, "Reload Paseo and test. This does not modify Windows desktop app storage.");
 })();
